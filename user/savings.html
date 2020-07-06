@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking</title>
+    <link href="../assets/img/favicon.png" rel="icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        #login-page{
+            margin-top:-45px
+        }
+        #transaction-page{
+            margin-top:-100px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container" id="login-page">
+        <h1 class="text-center">Welcome to Your Savings Account</h1>
+        <a href="index.html"><img src="../admin/img/back.png" alt="User Home"></a> <br> <a href="index.html"><h4 style="font-size:20px; margin:-25px 0px -10px 40px;" >User Home Page</h4></a> 
+        <div class="login-window">
+            <h2 class="text-center">Enter Your Password To Continue !!</h2>
+            <br>
+            <input class="form-control" type="password" name="" id="" placeholder="Enter your password">
+            <br>
+            <button id="verify-btn" class="btn btn-success">Enter</button>
+        </div>
+    </div>
+
+    <div class="container" id="transaction-page"><a href="index.html">
+        <h2 class="text-center" style="margin-top:-120" >Transactions Page</h2>
+        <img src="../admin/img/back.png" alt="User Home"></a> <br> <a href="index.html"><h4 style="font-size:20px; margin:-25px 0px -10px 40px;" >User Home Page</h4></a> 
+        <br>
+        <div class="row">
+            <div class="col-md-4">
+
+                <div class="deposit status">
+                    <h5>Deposit</h5>
+                    <h2>$ <span id="current-deposit">00</span></h2>
+                </div>
+
+            </div>
+            <div class="col-md-4 ">
+
+                <div class="withdraw status">
+                    <h5>Withdraw</h5>
+                    <h2>$<span id="current-withdraw">00</span></h2>
+
+                </div>
+
+            </div>
+            <div class="col-md-4 ">
+                <div class="balance status">
+                    <h5>Balance</h5>
+                    <h2>$<span id="current-balance">200000</span></h2>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="login-window">
+                    <h5>Deposit</h5>
+                    <input id="deposit-amount" class="form-control" type="text" placeholder="$ Enter Amount You Want to Deposit">
+                    <br>
+                    <button id="deposit-btn" class="btn btn-success">Deposit</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="login-window">
+                    <h5>Withdraw</h5>
+
+                    <input id="withdraw-amount" class="form-control" type="text" placeholder="$ Enter Amount You Want to Withdraw">
+                    <br>
+                    <button id="withdraw-btn" class="btn btn-success">Withdraw</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Java Script!-->
+    <script src="./script.js"></script>
+</body>
+
+</html>

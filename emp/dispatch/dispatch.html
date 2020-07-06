@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>E-POST OFFICE</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="../../assets/img/favicon.png" rel="icon">
+    <link href="../../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="../../assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="../../assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        h4 {
+            font-size: 30px;
+            float: left;
+            margin-left: 200px;
+        }
+        
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        #main {
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+        
+        input[type="radio"] {
+            display: none;
+        }
+        
+        label {
+            font-size: 18px;
+            cursor: pointer;
+            margin: 15px 10px;
+        }
+        
+        label:before {
+            content: '';
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            background: coral;
+            border-radius: 50%;
+            z-index: 2;
+            transition: box-shadow .4s ease, background .3s ease;
+        }
+        
+        input:checked+label:before {
+            box-shadow: inset 0px 3px 0 2px rgba(89, 202, 89, 1);
+            background: #fff;
+        }
+        
+        input[type="submit"] {
+            float: right;
+            background: #1bac91;
+            border: 0;
+            margin-right: 100px;
+            padding: 10px 24px;
+            color: #fff;
+            transition: 0.4s;
+            border-radius: 4px;
+        }
+        
+        input[type="submit"]:hover {
+            background: #22d8b6;
+        }
+        
+        table,
+        th,
+        td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top">
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <h3 style="color: wheat;">Actions that can be performed <br> by the EMPLOYEE :</h3> <br><br><br>
+            <a href="../update.php">Update Profile</a>
+            <a href="../changepw.php">Change Password</a>
+            <a href="dispatch.html">Dispatch Post</a>
+            <a href="../postd/postd.html">Search Post</a> <br><br><br>
+            <a style=" background-color:#818181b2; color: aqua; font-size:22px;" href="../index.html"> EMPLOYEE HOME</a>
+        </div>
+        <div class="container d-flex">
+
+            <div class="logo mr-auto">
+                <h1 class="text-light">
+                    <span style="font-size:20px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                    <a href="../index.html"><img src="../assets/img/logo.png" alt="" class="img-fluid"></a><a href="../index.html">E-POST OFFICE</a></h1>
+            </div>
+
+            <nav class="nav-menu d-none d-lg-block">
+                <ul>
+                    <li><a href="../index.html">Log OUT</a>
+                </ul>
+            </nav>
+            <!-- .nav-menu -->
+
+        </div>
+    </header>
+    <div id="main">
+        <marquee style="margin-bottom:40px;" class="marquee" behavior="alternate">Welcome EMPLOYEE !!!</marquee>
+        <form action="disno.php" id="idForm" method="GET">
+            <!--action="postdall.php"-->
+            <div class="section-title" data-aos="fade-up">
+                <h4>Select an Option: </h4> <br> <br> <br>
+                <div class="wrap">
+
+                    <input type="radio" onclick="idForm()" value="rad1" id="rad1" name="rads">
+                    <label for="rad1"> &nbsp;&nbsp; Dispatch Post No. :</label> <input class="w3-input w3-animate-input" style="display:inline; width:5%; max-width:13%" type="text" id="postno" name="postno" placeholder="Enter Post No."> <br>
+                    <input type="radio" onclick="idForm()" value="rad2" id="rad2" name="rads">
+                    <label for="rad2"> &nbsp;&nbsp; View Details Of All Pending Posts...</label>
+                </div>
+            </div>
+    </div> <br><br> <br><br>
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+        <div class="container">
+            <div class="copyright">
+                &copy; Copyright <strong><span>E-POST OFFICE</span></strong>. All Rights Reserved
+            </div>
+            <div class="credits">Designed by <a href="https://google.com/" target="_blank">Lvly Pavi</a>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
+    <script>
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+            document.getElementById("main").style.marginLeft = "250px";
+            document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+        }
+
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            document.body.style.backgroundColor = "white";
+        }
+
+        function idForm() {
+            var selectvalue = $('input[name=rads]:checked', '#idForm').val();
+            if (selectvalue == "rad1") {
+                return true;
+            } else if (selectvalue == "rad2") {
+                window.open('disall.php', '_self');
+                return true;
+            }
+
+        };
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script>
+    <!-- Vendor JS Files -->
+    <script src="../../assets/vendor/jquery/jquery.min.js"></script>
+    <script src="../../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <script src="../../assets/vendor/php-email-form/validate.js"></script>
+    <script src="../../assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+    <script src="../../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="../../assets/vendor/venobox/venobox.min.js"></script>
+    <script src="../../assets/vendor/aos/aos.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="../../assets/js/main.js"></script>
+
+</body>
+
+</html>
